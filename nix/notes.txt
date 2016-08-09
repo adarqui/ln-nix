@@ -1,0 +1,17 @@
+nix-env -qaP | grep package
+
+nix-env -i nix-repl
+nix-repl
+
+nix-shell
+
+nix-shell -p redis
+
+nix-build
+
+nix-collect-garbage -d
+
+nix-shell -p package --run command
+nix-shell -p redis --run "redis-server"
+
+nix-shell --run command
